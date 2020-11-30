@@ -1,14 +1,17 @@
-.App {
-  text-align: center;
+html {
+  font-size: 62.5%;
 }
-.App-content {
+.App {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.App-content {
+  text-align: center;
+  max-width: 110rem;
+  margin: auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
   color: white;
 }
 button {
