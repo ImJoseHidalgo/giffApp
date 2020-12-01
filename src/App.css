@@ -25,10 +25,13 @@ a {
   text-align: center;
   max-width: 110rem;
   margin: auto;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   color: white;
+}
+.App .khe .gif {
+  width: 350px;
 }
 .loading {
   font-size: 5rem;

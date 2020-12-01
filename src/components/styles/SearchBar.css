@@ -1,0 +1,27 @@
+.searchBar-container {
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.searchBar-container h3 {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.searchBar-container form input {
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+}
+.searchBar-container form button {
+  color: #000;
+  background: #fff;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  margin-left: 1rem;
+}
