@@ -4,8 +4,24 @@ html {
 .App {
   background-color: #282c34;
   min-height: 100vh;
+  text-align: center;
 }
-.App-content {
+.App .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.App .khe {
   text-align: center;
   max-width: 110rem;
   margin: auto;
@@ -14,7 +30,7 @@ html {
   grid-template-columns: 1fr 1fr 1fr;
   color: white;
 }
-button {
-  font-size: 20px;
-  padding: 10px;
+.loading {
+  font-size: 5rem;
+  color: #fff;
 }
