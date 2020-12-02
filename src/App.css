@@ -1,10 +1,18 @@
 html {
   font-size: 62.5%;
+  background-color: #ebebeb;
 }
 .App {
-  background-color: #282c34;
+  /* background-color: #ebebeb; */
+  color: #333;
   min-height: 100vh;
   text-align: center;
+  max-width: 50rem;
+  margin: auto;
+}
+.App h5 {
+  padding-top: 3rem;
+  font-size: 1.8rem;
 }
 .App .links {
   display: flex;
@@ -14,10 +22,11 @@ html {
 }
 h1 {
   font-size: 3rem;
-  color: #fff;
+}
+h5 {
+  margin: 0;
 }
 a {
-  color: #fff;
   font-size: 2rem;
   text-decoration: none;
 }
@@ -25,12 +34,17 @@ a {
   text-align: center;
   max-width: 110rem;
   margin: auto;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.App .khe .gif {
+  width: 350px;
 }
 .loading {
-  font-size: 5rem;
-  color: #fff;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }

@@ -23,7 +23,7 @@ function ListOfGifs({ params }) {
   return (
     <div className="khe">
       {gifs.map(({ id, title, url }) => (
-        <Gif id={id} key={id} title={title} url={url} />
+        <Gif key={id} title={title} url={url} />
       ))}
     </div>
   );

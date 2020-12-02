@@ -1,4 +1,4 @@
-import "./Gif.css";
+import "./styles/Gif.css";
 
 function Gif({ title, id, url }) {
   return (
