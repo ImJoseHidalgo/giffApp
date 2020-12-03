@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Gif from "./Gif";
 import getGifs from "../services/getGifs";
+import "./styles/LoadingPage.css";
 
 function ListOfGifs({ params }) {
   const { keyword } = params;
@@ -18,7 +19,18 @@ function ListOfGifs({ params }) {
     [keyword]
   );
 
-  if (loading) return <span className="loading"> Cargando...</span>;
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="khe">

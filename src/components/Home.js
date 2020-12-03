@@ -5,15 +5,13 @@ import "./styles/Home.css";
 function Home() {
   return (
     <div className="home">
-      <h2>
-        Encontra el GIF
-        <br />
-        que quieras
-      </h2>
+      <h2>Busca el GIF que quieras y compartilo haciendo click en el</h2>
       <Gif
-        title="Panda GIF"
-        url="https://media0.giphy.com/media/EatwJZRUIv41G/giphy.gif?cid=9e7fb7c6p5q2xmqi728lht7oecckvsiba7u3wo4sg95ch345&rid=giphy.gif"
+        title="Probalo haciendo click en el GIF de arriba!"
+        url="https://media.giphy.com/media/l0HlSFMhjVbgyA32U/giphy.gif"
       />
+      <h3>Probalo haciendo click en el GIF de arriba!</h3>
+      <button>Compartir</button>
     </div>
   );
 }
