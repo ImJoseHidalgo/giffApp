@@ -8,7 +8,6 @@ import Home from "./components/Home";
 function App() {
   return (
     <div className="App">
-      <h5>GIFs</h5>
       <SearchBar />
       <Route path="/" component={Home} />
       <section className="App-content">

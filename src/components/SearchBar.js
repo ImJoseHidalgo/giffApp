@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, Route } from "wouter";
 import "./styles/SearchBar.css";
 import { useLocation } from "wouter";
 
@@ -9,7 +10,6 @@ function SearchBar() {
   const handleSubmit = (e) => {
     if (keyword !== "") {
       e.preventDefault();
-      //navegar a otra ruta
       pushLocation(`/search/${keyword}`);
       setKeyword("");
     }
@@ -21,6 +21,9 @@ function SearchBar() {
 
   return (
     <section className="searchBar-container">
+      <Link to="/">
+        <h5>GIFs</h5>
+      </Link>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
