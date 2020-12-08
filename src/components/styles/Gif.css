@@ -1,10 +1,39 @@
 .gif {
   margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 .gif img {
   width: 100%;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.gif .per {
+  user-select: none;
+  position: absolute;
+  display: none;
+  transform: scaleY(1.3);
+}
+.gif .per.active {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+  background: linear-gradient(
+    0.5turn,
+    rgba(0, 0, 0, 0.3),
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    rgba(0, 0, 0, 0.3)
+  );
+  transform: scaleY(1);
 }
 .Modal {
   color: #000;
