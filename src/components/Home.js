@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Gif from "./Gif";
+import Loading from './Loading';
+import { useGifs } from '../hooks/useGifs';
 import "./styles/Home.css";
 
 function Home() {
+  // const [keyword, setKeyword] = useState('')
+  const { loading, gifs } = useGifs()
+
   return (
     <div className="home">
-      <h2>
-        Busca el GIF que quieras y guardalo manteniendo presionando sobre el
-      </h2>
+      <h3>Busca el GIF que quieras y guardalo manteniendo presionando sobre el</h3>
+      <h2>Ultima Busqueda:</h2>
+      {(loading) 
+        ? <Loading /> 
+        : (<div className="khe-home">
+           {gifs.map(({ id, title, url }) => (
+             <Gif key={id} id={id} title={title} url={url} />
+           ))}
+        </div>)}
       <Gif
         title="Probalo haciendo click en el GIF de arriba!"
         url="https://media.giphy.com/media/l0HlSFMhjVbgyA32U/giphy.gif"

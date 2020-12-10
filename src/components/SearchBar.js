@@ -22,7 +22,7 @@ function SearchBar() {
   return (
     <section className="searchBar-container">
       <Link to="/">
-        <h5>GIFs</h5>
+        <h5>Home</h5>
       </Link>
       <form onSubmit={handleSubmit}>
         <input

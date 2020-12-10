@@ -1,43 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Gif from "./Gif";
-import getGifs from "../services/getGifs";
+import Loading from './Loading'
+import { useGifs } from '../hooks/useGifs'
 import "./styles/LoadingPage.css";
 
 function ListOfGifs({ params }) {
   const { keyword } = params;
-  const [loading, setLoading] = useState(false);
-  const [gifs, setGifs] = useState([]);
+  const { loading, gifs } = useGifs({ keyword });
 
-  useEffect(
-    function () {
-      setLoading(true);
-      getGifs({ keyword }).then((gifs) => {
-        setGifs(gifs);
-        setLoading(false);
-      });
-    },
-    [keyword]
-  );
-
-  if (loading) {
-    return (
-      <div className="loading-container">
-        <div className="lds-ellipsis">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="khe">
-      {gifs.map(({ id, title, url }) => (
-        <Gif key={id} id={id} title={title} url={url} />
-      ))}
-    </div>
-  );
+  return <> 
+    { (loading) 
+      ? <Loading /> 
+      : (<div className="khe">
+        {gifs.map(({ id, title, url }) => (
+          <Gif key={id} id={id} title={title} url={url} />
+        ))}
+      </div>)
+    }
+  </>
 }
 export default ListOfGifs;

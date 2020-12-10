@@ -25,8 +25,13 @@ a {
   text-decoration: none;
 }
 .App .khe {
-  text-align: center;
+  columns: 2;
   width: 90%;
+  margin: 3rem auto;
+}
+.App .khe-home {
+  columns: 2;
+  width: 100%;
   margin: 3rem auto;
 }
 .loading {
