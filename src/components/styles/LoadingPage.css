@@ -1,8 +1,36 @@
 .loading-container {
-  height: 50vh;
+  width: 100%;
+  margin-top: 2rem;
+  min-height: 100vh;
+  /* height: 50vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+}
+@media only screen and (max-width: 375px) {
+  .loading-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .loading-container {
+    width: 90%;
+    margin-top: -3rem;
+  }
+}
+.nextPageButon {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(0.25turn, #f872d1, #c772f3);
+  border: none;
+  width: 90%;
+  height: 5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
 }
 .lds-ellipsis {
   display: inline-block;

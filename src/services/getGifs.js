@@ -1,7 +1,7 @@
 const apiKey = "BYKsFzfenvLYOR9gbpPxcHDFvxTZ2C7W";
 
-function getGifts({ keyword = "" } = {}) {
-  const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=10&offset=0&rating=g&lang=es`;
+function getGifts({ limit = 20, keyword = "", page = 0 } = {}) {
+  const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=${limit}&offset=${page * limit}&rating=g&lang=es`;
 
   return fetch(apiURL)
     .then((res) => res.json())

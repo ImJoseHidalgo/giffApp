@@ -28,6 +28,7 @@ a {
   columns: 2;
   width: 90%;
   margin: 3rem auto;
+  min-height: 100vh;
 }
 .App .khe-home {
   columns: 2;

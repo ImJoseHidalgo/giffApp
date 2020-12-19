@@ -6,7 +6,9 @@ import "./styles/LoadingPage.css";
 
 function ListOfGifs({ params }) {
   const { keyword } = params;
-  const { loading, gifs } = useGifs({ keyword });
+  const { loading, gifs, setPage } = useGifs({ keyword });
+
+  const handleNextPage = () => setPage(prevPage => prevPage + 1);
 
   return <> 
     { (loading) 
@@ -17,6 +19,7 @@ function ListOfGifs({ params }) {
         ))}
       </div>)
     }
+    <button className="nextPageButon" onClick={handleNextPage}>Siguiente</button>
   </>
 }
 export default ListOfGifs;
