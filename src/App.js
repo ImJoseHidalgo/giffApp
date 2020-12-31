@@ -13,13 +13,13 @@ function App() {
     <StaticContext.Provider value={{name: 'Web App De Prueba Pa', seguimeEnGitHub: true}}>
       <div className="App">
         <SearchBar />
-          <GifsContextProvider>
-            <Route path="/" component={Home} />
-            <section className="App-content">
-              <Route path="/search/:keyword" component={ListOfGifs} />
-            </section>
-            <Route exact path="/gif/:id" component={Detail} />
-          </GifsContextProvider>
+        <GifsContextProvider>
+          <Route path="/" component={Home} />
+          <section className="App-content">
+            <Route path="/search/:keyword" component={ListOfGifs} />
+          </section>
+          <Route exact path="/gif/:id" component={Detail} />
+        </GifsContextProvider>
       </div>
     </StaticContext.Provider>
   )

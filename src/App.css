@@ -19,21 +19,25 @@ html {
 h1 {
   font-size: 3rem;
 }
-
 a {
   font-size: 2rem;
   text-decoration: none;
 }
 .App .khe {
-  columns: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   width: 90%;
   margin: 3rem auto;
   min-height: 100vh;
 }
 .App .khe-home {
-  columns: 2;
-  width: 100%;
-  margin: 3rem auto;
+  /* columns: 2;
+  width: 100%;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 3rem auto; 
 }
 .loading {
   height: 30rem;

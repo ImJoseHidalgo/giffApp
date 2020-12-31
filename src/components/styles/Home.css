@@ -9,7 +9,7 @@
 }
 .home h2 {
   font-size: 1.6rem;
-  margin: 1rem 0 -1rem;
+  margin: 2rem 0 -1rem;
   color: #606060;
   text-align: start;
 }
@@ -29,4 +29,9 @@
   border-radius: 1rem;
   margin-bottom: 2rem;
   cursor: pointer;
+}
+.gif-home-landing{
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: .5rem;
 }

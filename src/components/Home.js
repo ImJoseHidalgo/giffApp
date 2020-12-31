@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="home">
       <h3>Busca el GIF que quieras y guardalo manteniendo presionando sobre el</h3>
-      <Gif title="Probalo haciendo click en el GIF de arriba!" url="https://media.giphy.com/media/l0HlSFMhjVbgyA32U/giphy.gif" />
+      <img className="gif-home-landing" src="https://media.giphy.com/media/l0HlSFMhjVbgyA32U/giphy.gif" />
       <h2>Ultima Busqueda:</h2>
       {(loading) 
         ? <Loading /> 

@@ -15,11 +15,11 @@ function ListOfGifs({ params }) {
       ? <Loading /> 
       : (<div className="khe">
         {gifs.map(({ id, title, url }) => (
-          <Gif key={id} id={id} title={title} url={url} />
+          <Gif key={id} id={id} title={title} url={url} keyword={keyword} />
         ))}
       </div>)
     }
-    <button className="nextPageButon" onClick={handleNextPage}>Siguiente</button>
+    <button className="nextPageButon" onClick={handleNextPage}>Más GIFs</button>
   </>
 }
 export default ListOfGifs;

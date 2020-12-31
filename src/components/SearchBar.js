@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link, Route } from "wouter";
+import { Link } from "wouter";
 import "./styles/SearchBar.css";
 import { useLocation } from "wouter";
 
 function SearchBar() {
   const [keyword, setKeyword] = useState("");
-  const [path, pushLocation] = useLocation();
+  const [pushLocation] = useLocation();
 
   const handleSubmit = (e) => {
     if (keyword !== "") {
@@ -20,10 +20,10 @@ function SearchBar() {
   };
 
   return (
-    <section className="searchBar-container">
-      <Link to="/">
-        <h5>Home</h5>
-      </Link>
+    <header >
+      <section className="searchBar-container">
+        <Link to="/"><h5>Home</h5></Link>
+      </section>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
@@ -33,7 +33,7 @@ function SearchBar() {
         />
         <button>Buscar</button>
       </form>
-    </section>
+    </header>
   );
 }
 export default SearchBar;

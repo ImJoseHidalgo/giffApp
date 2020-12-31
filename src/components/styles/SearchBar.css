@@ -1,4 +1,4 @@
-.searchBar-container {
+header {
   width: 90%;
   margin: auto;
   display: flex;
@@ -7,20 +7,20 @@
   height: 13rem;
   position: relative;
 }
-.searchBar-container form {
+header form {
   position: absolute;
   bottom: 0;
   display: flex;
   width: 100%;
 }
-.searchBar-container form input {
+header form input {
   height: 4rem;
   border: none;
   border-radius: 0.5rem 0 0 0.5rem;
   padding-left: 1rem;
   width: 100%;
 }
-.searchBar-container form button {
+header form button {
   background: linear-gradient(0.25turn, #f872d1, #c772f3);
   color: #fff;
   font-size: 1.3rem;
@@ -30,7 +30,12 @@
   border-radius: 0 0.5rem 0.5rem 0;
   padding: 0 1rem;
 }
-h5 {
+header .searchBar-container {
+  display: flex;
+  justify-content: center;
+}
+header .searchBar-container h5 {
+  width: fit-content;
   margin: 0;
   margin-bottom: 4rem;
   font-size: 1.8rem;
