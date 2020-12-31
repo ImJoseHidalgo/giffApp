@@ -5,7 +5,7 @@ import { useLocation } from "wouter";
 
 function SearchBar() {
   const [keyword, setKeyword] = useState("");
-  const [pushLocation] = useLocation();
+  const [path, pushLocation] = useLocation();
 
   const handleSubmit = (e) => {
     if (keyword !== "") {
