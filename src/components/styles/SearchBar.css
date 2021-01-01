@@ -31,13 +31,35 @@ header form button {
   padding: 0 1rem;
 }
 header .searchBar-container {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+header .searchBar-container img:first-child {
+  position: absolute;
+  left: 0;
+  background: none;
+  width: 2rem;
+  top: -.5rem;
+  padding: .5rem .8rem;
 }
 header .searchBar-container h5 {
-  width: fit-content;
+  grid-column-start: 2;
   margin: 0;
   margin-bottom: 4rem;
   font-size: 1.8rem;
   cursor: pointer;
+}
+header .searchBar-container img {
+  background: linear-gradient(0.25turn, #f872d1, #c772f3);
+  border: none;
+  width: 2.5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: absolute;
+  padding: .5rem .8rem .8rem 1.1rem;
+  top: -1rem;
+  right: 0;
 }

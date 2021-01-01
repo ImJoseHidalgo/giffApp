@@ -1,7 +1,7 @@
 import React from "react";
 import Gif from "./Gif";
-import Loading from './Loading'
-import { useGifs } from '../hooks/useGifs'
+import Loading from './Loading';
+import { useGifs } from '../hooks/useGifs';
 import "./styles/LoadingPage.css";
 
 function ListOfGifs({ params }) {
